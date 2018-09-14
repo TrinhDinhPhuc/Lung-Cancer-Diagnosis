@@ -1,0 +1,16 @@
+flask
+glob
+numpy
+pandas
+SimpleITK
+scipy
+keras
+tensorflow
+imageio
+PIL
+gensim
+bs4
+requests
+re
+flask_sqlalchemy
+sqlalchemy
