@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title  -->
+    <title>CBD Life </title>
+    <!-- Favicon  -->
+    <link rel="icon" href="../static/img/core-img/favicon.ico">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- sdad -->
+
+</head>
+
+<body>
+
+
+    <!-- ***** Header Area Start ***** -->
+
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 h-100">
+                        <div class="main-menu h-100">
+                            <nav class="navbar h-100 navbar-expand-lg">
+                                <!-- Logo Area  -->
+                                <a class="navbar-brand" href="http://127.0.0.1:5000"><img src="../static/img/core-img/logo.png" alt="Logo"></a>
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                                <div class="collapse navbar-collapse" id="medilifeMenu">
+                                    <!-- Menu Area -->
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="http://127.0.0.1:5000">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+                                        </li>
+                                    </ul>
+                                    <!-- Appointment Button -->
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Hero Area Start ***** -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img bg-overlay-white" style="background-image: url(../static/img/bg-img/hero1.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="hero-slides-content">
+                                <h2 data-animation="fadeInUp" data-delay="100ms">CBD - Lung Diagnosis <br>Using Neural Network</h2>
+                                <h6 data-animation="fadeInUp" data-delay="400ms">People with an increased risk of lung cancer may consider annual lung cancer screening using low-dose CT scans.</h6>
+                                <!-- <a href="#" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Discover Medifile <span>+</span></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img bg-overlay-white" style="background-image: url(../static/img/bg-img/breadcumb3.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="hero-slides-content">
+                                <h2 data-animation="fadeInUp" data-delay="100ms">CBD - Lung Diagnosis <br>Using Neural Network</h2>
+                                <h6 data-animation="fadeInUp" data-delay="400ms">People with an increased risk of lung cancer may consider annual lung cancer screening using low-dose CT scans.</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img bg-overlay-white" style="background-image: url(../static/img/bg-img/breadcumb1.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="hero-slides-content">
+                                <h2 data-animation="fadeInUp" data-delay="100ms">CBD - Lung Diagnosis <br>Using Neural Network</h2>
+                                <h6 data-animation="fadeInUp" data-delay="400ms">People with an increased risk of lung cancer may consider annual lung cancer screening using low-dose CT scans.</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Hero Area End ***** -->
+
+    <!-- ***** Book An Appoinment Area Start ***** -->
+    <div class="medilife-book-an-appoinment-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="appointment-form-content">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-12 col-lg-9">
+                                <div class="medilife-appointment-form">
+                                    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                                        <div class="row align-items-end">
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="speciality" name="speciality">
+                                                    <option>HIV Diagnosis</option>
+                                                    <option>Lung Cancer Diagnosis</option>
+                                                    <option>Diabetes Diagnosis</option>
+                                                    <option>STD Testing</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="input_type" name="input_type">
+                                                    <option>Patient's file (.mhd)</option>
+                                                    <option>X-Ray image</option>
+                                                    <option>Others</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="age" id="age" placeholder="Age" >
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="gender" id="gender" placeholder="Gender">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="name" id="name" placeholder="Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="phone" id="phone" placeholder="Phone">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="email" id="email" placeholder="E-mail">
+                                                </div>
+                                            </div>
+                                            <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+                                            <p style="color:#F8F8FF;"> Select files <input id="file-picker" type="file" name="file" accept="*" multiple><p></h5>                                
+                                            <input class="btn medilife-btn" type="submit" value="Upload!" id="upload-button">
+                                            </form>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="medilife-contact-info">
+                                    <!-- Single Contact Info -->
+                                    <h6 style="color:#F8F8FF;">Introduction Step-by-step</p>
+                                    <div class="single-contact-info mb-30">
+                                        <img src="../static/img/icons/alarm-clock.png" alt="">
+                                        <p>Step 1: Fill the patient's info</p>
+                                    </div>
+                                    <!-- Single Contact Info -->
+                                    <div class="single-contact-info mb-30">
+                                        <img src="../static/img/icons/envelope.png" alt="">
+                                        <p>Step 2: Click "UPLOAD" button</button></p>
+                                    </div>
+                                    <!-- Single Contact Info -->
+                                    <div class="single-contact-info">
+                                        <img src="../static/img/icons/map-pin.png" alt="">
+                                        <p>Step 3: See the result</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Book An Appoinment Area End ***** -->
+    <!-- ***** Gallery Area Start ***** -->
+    <div class="medilife-gallery-area owl-carousel">
+        <!-- Single Gallery Item -->
+        <div class="single-gallery-item">
+            <img src="../static/img/bg-img/Img_0.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="../static/img/bg-img/Img_0.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <!-- Single Gallery Item -->
+        <div class="single-gallery-item">
+            <img src="../static/img/bg-img/Img_30.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="../static/img/bg-img/Img_30.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+        <!-- Single Gallery Item -->
+        <div class="single-gallery-item">
+            <img src="../static/img/bg-img/Img_80.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="../static/img/bg-img/Img_80.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+
+        <!-- Single Gallery Item -->
+        <div class="single-gallery-item">
+            <img src="../static/img/bg-img/Img_110.jpg" alt="">
+            <div class="view-more-btn">
+                <a href="../static/img/bg-img/Img_110.jpg" class="btn gallery-img">See More +</a>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Gallery Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-75">
+        <!-- Main Footer Area -->
+        <div class="footer-logo">
+            <img src="../static/img/core-img/logo.png" alt=""> 
+        </div> 
+        <!-- Bottom Footer Area -->
+        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is created by <a href="https://www.facebook.com/Harry996" target="_blank">PhucCoi</a> corporated with <a href="http://cbdrobot.com/" target="_blank">CBD Robotics </a><i class="fa fa-heart-o" aria-hidden="true"></i>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="../static/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="../static/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="../static/js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="../static/js/active.js"></script>
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='../static/others/js/jquery-2.1.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='../static/others/js/uploadr.js') }}"></script>
+    <script src="../static/js/blueimp-helper.js"></script>
+    <script src="../static/js/blueimp-gallery.js"></script>
+    <script src="../static/js/blueimp-gallery-fullscreen.js"></script>
+    <script src="../static/js/blueimp-gallery-indicator.js"></script>
+    <script src="../static/js/blueimp-gallery-video.js"></script>
+    <script src="../static/js/blueimp-gallery-vimeo.js"></script>
+    <script src="../static/js/blueimp-gallery-youtube.js"></script>
+    <script src="../static/js/vendor/jquery.js"></script>
+    <script src="../static/js/jquery.blueimp-gallery.js"></script>
+    <script src="../static/js/demo/demo.js"></script>
+</body>
+
+</html>

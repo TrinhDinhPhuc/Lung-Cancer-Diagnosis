@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title  -->
+    <title>CBD Life </title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="../static/img/core-img/favicon.ico">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- Gallery -->
+    <link rel="stylesheet" href="../static/css/blueimp-gallery.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- ***** Header Area Start ***** -->
+
+    <!-- Main Header Area -->
+    <div class="main-header-area" id="stickyHeader">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 h-100">
+                    <div class="main-menu h-100">
+                        <nav class="navbar h-100 navbar-expand-lg">
+                            <!-- Logo Area  -->
+                            <a class="navbar-brand" href="http://127.0.0.1:5000"><img src="../static/img/core-img/logo.png" alt="Logo"></a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu"
+                                aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                            <div class="collapse navbar-collapse" id="medilifeMenu">
+                                <!-- Menu Area -->
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="http://127.0.0.1:5000">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Breadcumb Area Start ***** -->
+    <section class="breadcumb-area bg-img gradient-background-overlay" style="background-image: url(../static/img/bg-img/breadcumb2.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <h3 class="breadcumb-title">The result of patient's lung diagnosis</h3>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetuer</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Breadcumb Area End ***** -->
+
+    <!-- ***** Elements Area Start ***** -->
+    <section class="elements-area section-padding-100-0">
+        <div class="container">
+
+
+            <div class="medilife-tabs-content">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="specialities-tab" data-toggle="tab" href="#specialities" role="tab" aria-controls="specialities"
+                            aria-selected="true">Specialities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="institution-tab" data-toggle="tab" href="#institution" role="tab" aria-controls="institution" aria-selected="false">Treatments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="faq-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="faq" aria-selected="false">Nodule's Diameter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="scolarship-tab" data-toggle="tab" href="#scolarship" role="tab" aria-controls="scolarship" aria-selected="false">Frequently asked questions (FAQ) </a> 
+                    </li>
+                </ul>
+
+                <div class="tab-content mb-100" id="myTabContent">
+                    <div class="tab-pane fade" id="institution" role="tabpanel" aria-labelledby="institution-tab">
+                        <div class="medilife-tab-content d-md-flex align-items-center">
+                            <!-- Medilife Tab Text  -->
+                            <div class="medilife-tab-text">
+                                <h1  style="color:#DC143C" >Treatments</h1>
+                                <p>{{treatment}}</p>
+                            </div>
+                            <!-- Medilife Tab Img  -->
+                            <div class="medilife-tab-img">
+                                <img src="../static/img/bg-img/about1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+                        <div class="medilife-tab-content d-md-flex align-items-center">
+                            <!-- Medilife Tab Text  -->
+                            <div class="medilife-tab-text">
+                                    <h1  style="color:#DC143C" >Nodule's Diameter</h1>
+                                    <p  style="color:rgb(41, 0, 153)" >The diameter of the nodule is: {{calculate_diameter}}mm</p>
+
+                            </div>
+                            <!-- Medilife Tab Img  -->
+                            <div class="medilife-tab-img">
+                                <img src="../static/img/bg-img/medical1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="specialities" role="tabpanel" aria-labelledby="specialities-tab">
+                        <div class="medilife-tab-content d-md-flex align-items-center">
+                            <!-- Medilife Tab Text  -->
+                            <div class="medilife-tab-text">
+                                    <h1  style="color:#DC143C" >Diagnosis of lung cancer</h1>
+                                    <p  style="color:rgb(41, 0, 153)" > I am so sorry to inform you that you are diagnosed {{prediction}} lung cancer </p>
+                                    <p>People with an increased risk of lung cancer may consider annual lung cancer screening using low-dose CT scans. Lung cancer screening is generally offered to people 55 and older who smoked heavily for many years and are otherwise healthy.
+                                    Discuss your lung cancer risk with your doctor. Together you can decide whether lung cancer screening is right for you.</p>
+                            </div>
+                            <!-- Medilife Tab Img  -->
+                            <div class="medilife-tab-img">
+                                <img src="../static/img/bg-img/tab.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="scolarship" role="tabpanel" aria-labelledby="scolarship-tab">
+                        <div class="medilife-tab-content d-md-flex align-items-center">
+                            <!-- Medilife Tab Text  -->
+                            <div class="medilife-tab-text">
+                                    <h1  style="color:#DC143C" >Questions People Ask About Cancer</h1>
+                                    <p style="color:rgb(41, 0, 153)">How common is cancer?</p>
+                                    <p>About one-third of all people in the US will develop cancer during their lifetimes.</p>
+                                    <p style="color:rgb(41, 0, 153)">How many people alive today have ever had cancer?</p>
+                                    <p>Today, more than 15 million people alive in the United States have had some type of cancer. Some of these people are cancer-free; others still have it.</p>
+                                    <p style="color:rgb(41, 0, 153)">What causes cancer?</p>
+                                    <p>Some cancers are caused by things people do or expose themselves to. For example, tobacco use can cause cancer of the lungs, mouth, throat, bladder, kidneys, and many other organs. Of course, not everyone who uses tobacco will get cancer, but it greatly increases a person’s risk. It increases their chance of developing heart and blood vessel disease, too. </p>
+                                </div>
+                            <!-- Medilife Tab Img  -->
+                            <div class="medilife-tab-img">
+                                <img src="../static/img/bg-img/medical1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <h2>Lung's Slices Gallery</h2>
+<!-- The container for the list of example images -->
+
+<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
+<!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
+<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+<div id="links">
+        <a href="../static/img/Img_0.jpg" title="Lung's slice: 0">
+            <img src="../static/img/Img_0.jpg" alt="Lung's slice: 0">
+        </a>
+        <a href="../static/img/Img_10.jpg" title="Lung's slice: 10">
+            <img src="../static/img/Img_10.jpg" alt="Lung's slice: 10">
+        </a>
+        <a href="../static/img/Img_20.jpg" title="Lung's slice: 20">
+            <img src="../static/img/Img_20.jpg" alt="Lung's slice: 20">
+        </a>
+        <a href="../static/img/Img_30.jpg" title="Lung's slice: 30">
+            <img src="../static/img/Img_30.jpg" alt="Lung's slice: 30">
+        </a>    
+        <a href="../static/img/Img_40.jpg" title="Lung's slice: 40">
+            <img src="../static/img/Img_40.jpg" alt="Lung's slice: 40">
+        </a>
+        <a href="../static/img/Img_50.jpg" title="Lung's slice: 50">
+            <img src="../static/img/Img_50.jpg" alt="Lung's slice: 50">
+        </a>
+        <a href="../static/img/Img_60.jpg" title="Lung's slice: 60">
+            <img src="../static/img/Img_60.jpg" alt="Lung's slice: 60">
+        </a>
+        <a href="../static/img/Img_70.jpg" title="Lung's slice: 70">
+            <img src="../static/img/Img_70.jpg" alt="Lung's slice: 70">
+        </a>
+        <a href="../static/img/Img_80.jpg" title="Lung's slice: 80">
+            <img src="../static/img/Img_80.jpg" alt="Lung's slice: 80">
+        </a>
+        <a href="../static/img/Img_91.jpg" title="Lung's slice: 91">
+            <img src="../static/img/Img_91.jpg" alt="Lung's slice: 91">
+        </a>
+
+
+    </div>
+    </section>
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-75">
+        <!-- Main Footer Area -->
+        <div class="footer-logo">
+            <img src="../static/img/core-img/logo.png" alt="">
+        </div>
+        <!-- Bottom Footer Area -->
+        <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is created by <a href="https://www.facebook.com/Harry996" target="_blank">PhucCoi</a> corporated with <a href="http://cbdrobot.com/" target="_blank">CBD Robotics </a><i class="fa fa-heart-o" aria-hidden="true"></i>
+
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="../static/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="../static/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="../static/js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="../static/js/active.js"></script>
+    <!-- Gallery -->
+    <script type="text/javascript" src="{{ url_for('static', filename='../static/js/jquery-2.1.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='../static/js/uploadr.js') }}"></script>  
+    <script src="../static/js/blueimp-gallery.min.js"></script>
+
+    <script>
+            document.getElementById('links').onclick = function (event) {
+                event = event || window.event;
+                var target = event.target || event.srcElement,
+                    link = target.src ? target.parentNode : target,
+                    options = {index: link, event: event},
+                    links = this.getElementsByTagName('a');
+                blueimp.Gallery(links, options);
+            };
+            </script>
+            <script>
+            blueimp.Gallery(
+                document.getElementById('links').getElementsByTagName('a'),
+                {
+                    container: '#blueimp-gallery-carousel',
+                    carousel: true
+                }
+            );
+            </script>
+</body>
+
+</html>
